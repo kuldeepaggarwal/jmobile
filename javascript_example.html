@@ -1,0 +1,87 @@
+<!-- include custom_mobile js before jquery.mobile -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/jquery.mobile-1.3.0.css" />
+    <script type="text/javascript"
+    src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/mymobile.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.3.0.js"></script>
+  </head>
+  <body>
+    <!-- <div data-role="page" id="first">
+      <div data-role="header">
+        <h1>Dialog Test</h1>
+      </div>
+      <div data-role="content">
+        <p>
+          <a href="#page2">Another Page</a><br/>
+          <a href="products.html">Yet Another Page</a><br/>  
+        </p>
+      </div>
+    </div>
+    <div data-role="page" id="page2">
+      <div data-role="header">
+        <h1>The Second</h1>
+      </div>
+      <div data-role="content">
+        <p>
+          This is the Second. Go <a href="#first">first</a>.
+        </p>
+      </div>
+    </div> -->
+
+    <div data-role="page" id="third">
+
+      <div data-role="header">
+        <h1>Test</h1>
+      </div>
+
+      <div data-role="content">
+
+        <form>
+          <div data-role="fieldcontain">
+            <label for="isabsurl">Is Absolute URL?</label>
+            <input type="text" name="isabsurl" id="isabsurl" value=""  />
+            <div id="isabsurlresult"></div>
+          </div>  
+
+          <div data-role="fieldcontain">
+            <label for="isrelurl">Is Relative URL?</label>
+            <input type="text" name="isrelurl" id="isrelurl" value=""  />
+            <div id="isrelurlresult"></div>
+          </div>  
+
+          <div data-role="fieldcontain">
+            <label for="issamedomain">Is Same Domain?</label>
+            <input type="text" name="issamedomain" id="issamedomain" value=""  />
+            <input type="text" name="issamedomain2" id="issamedomain2" value=""  />
+            <div id="issamedomainresult"></div>
+          </div>  
+
+          <div data-role="fieldcontain">
+            <label for="makepath">Make Path Absolute</label>
+            <input type="text" name="makepath" id="makepath" value="" placeholder="Relative Path" />
+            <input type="text" name="makepath2" id="makepath2" value="" placeholder="Absolute Path" />
+            <div id="makepathresult"></div>
+          </div>  
+
+          <div data-role="fieldcontain">
+            <label for="makeurl">Make URL Absolute</label>
+            <input type="text" name="makeurl" id="makeurl" value="" placeholder="Relative URL" />
+            <input type="text" name="makeurl2" id="makeurl2" value="" placeholder="Absolute URL" />
+            <div id="makeurlresult"></div>
+          </div>  
+
+          <div data-role="fieldcontain">
+            <label for="parseurl">Parse URL</label>
+            <input type="text" name="parseurl" id="parseurl" value=""  />
+            <div id="parseurlresult"></div>
+          </div>  
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

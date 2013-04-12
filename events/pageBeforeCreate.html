@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Page Before Create</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/jquery.mobile-1.3.0.css" />
+    <script type="text/javascript"
+    src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/jquery.mobile-1.3.0.js"></script>
+  </head>
+  <body>
+    <div data-role="page" id="Page">
+      <div data-role="header" data-position="fixed">
+        <a href="" data-rel="back">Back</a>
+        <h1>Page Before Create</h1>
+      </div>
+      <div data-role="content">
+        <ul id="peopleList" data-role="listview" data-inset="true"></ul>
+
+      </div>
+      <div data-role="footer" data-position="fixed">
+        <h4><i>Copyright KD &copy; 2012</i></h4>
+      </div>
+    </div>
+    <script type="text/javascript">
+      $("#Page").bind("pagebeforecreate", function(e){
+        $.get("../json_data/people.json", {}, function(res,code) {
+          res = res.people;
+          var s = "";
+          for (var i = 0; i < res.length; i++) {
+          s += "<li><a href='person.html?id="+res[i].id+"'>"+res[i].name+"</a></li>";
+          }
+          $("#peopleList").html(s).listview("refresh");
+          }, "json");
+        $(document).delegate("#personPage", "pagebeforeshow", function(e) {
+          var thisPage = $(this),
+              thisUrl = thisPage.data("url"),
+              thisId = thisUrl.split("=")[1];
+
+          $.get("person"+thisId+".json", {}, function(res, code) {
+            $("h1",thisPage).text(res.name);  
+            s = "<p>"+res.name +" is a "+res.gender+" and likes "+res.hobbies+"</p>";
+            $("#contentArea", thisPage).html(s);
+            }, "json");
+          });
+
+      })
+    </script>
+  </body>
+</html>

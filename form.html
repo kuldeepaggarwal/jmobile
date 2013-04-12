@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>New Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/jquery.mobile-1.3.0.css" />
+    <script type="text/javascript"
+    src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.3.0.js"></script>
+  </head>
+  <body>
+    <div data-role="page">
+      <div data-role="header" data-position="fixed">
+        <a href="" data-rel="back">Back</a>
+        <h1>Form</h1>
+      </div>
+      <div data-role="content">
+        <form action="echo.cfm" method="post">
+          <h1> Vertical Selection Boxes</h1>
+          <div data-role="fieldcontain">
+            <fieldset data-role="controlgroup">
+              <legend>Favorite Movie:</legend>
+              <input type="checkbox" name="favoritemovie"
+              id="favoritemovie1" value="Star Wars">
+              <label for="favoritemovie1">Star Wars</label>
+              <input type="checkbox" name="favoritemovie"
+              id="favoritemovie2" value="Vanilla Sky">
+              <label for="favoritemovie2">Vanilla Sky</label>
+              <input type="checkbox" name="favoritemovie"
+              id="favoritemovie3" value="Inception">
+              <label for="favoritemovie3">Inception</label>
+            </fieldset>
+            <br>
+            <fieldset data-role="controlgroup">
+              <legend>Favorite Phone:</legend>
+              <input type="radio" name="phone"
+              id="favoritephone1" value="S3">
+              <label for="favoritephone1">S3</label>
+
+              <input type="radio" name="phone"
+              id="favoritephone2" value="nexus">
+              <label for="favoritephone2">nexus</label>
+
+              <input type="radio" name="phone"
+              id="favoritephone3" value="s4">
+              <label for="favoritephone3">s4</label>
+            </fieldset>
+          </div>
+          <h1> Horizontal Selection Boxes</h1>
+          <div data-role="fieldcontain">
+            <fieldset data-role="controlgroup" data-type="horizontal">
+              <legend>Favorite Movie:</legend>
+              <input type="checkbox" name="favoritemovie1"
+              id="favoritemovie1" value="Star Wars">
+              <label for="favoritemovie1">Star Wars</label>
+              <input type="checkbox" name="favoritemovie1"
+              id="favoritemovie2" value="Vanilla Sky">
+              <label for="favoritemovie2">Vanilla Sky</label>
+              <input type="checkbox" name="favoritemovie1"
+              id="favoritemovie3" value="Inception">
+              <label for="favoritemovie3">Inception</label>
+            </fieldset>
+            <br>
+            <fieldset data-role="controlgroup" data-type="horizontal" >
+              <legend>Favorite Phone:</legend>
+              <input type="radio" name="phone1"
+              id="favoritephone1" value="S3">
+              <label for="favoritephone1">S3</label>
+
+              <input type="radio" name="phone1"
+              id="favoritephone2" value="nexus">
+              <label for="favoritephone2">nexus</label>
+
+              <input type="radio" name="phone1"
+              id="favoritephone3" value="s4">
+              <label for="favoritephone3">s4</label>
+            </fieldset>
+          </div>
+          <br>
+          <div data-role="fieldcontain">
+            <label for="favmovie"> Favourite Movie: </label>
+            <select id="favmovie" name="favmovie">
+              <option>Star Wars</option>
+              <option>Vanilla Sky</option>
+              <option>Inception</option>
+            </select>
+          </div>
+          <br>
+
+          <h3>Select field Groupiing</h3>
+          <div data-role="fieldcontain">
+            <fieldset data-role="controlgroup">
+              <legend>Select Groupers</legend>
+              <label for="favmovie1">Favourite Movie:</label>
+              <select id="favmovie1" name="favmovie1">
+                <option>Star Wars</option>
+                <option>Vanilla Sky</option>
+                <option>Inception</option>
+              </select>
+              <label for="favgame">Favourite Game:</label>
+              <select id="favgame" name="favgame">
+                <option>DragonBall Z</option>
+                <option>Star Wars</option>
+                <option>Pokemon</option>
+              </select>
+            </fieldset>
+          </div>
+          
+          <h3>Select field Groupiing with Horizontal Effect</h3>
+          <div data-role="fieldcontain">
+            <fieldset data-role="controlgroup" data-type="horizontal">
+              <legend>Select Groupers</legend>
+              <label for="favmovie1">Favourite Movie:</label>
+              <select id="favmovie1" name="favmovie1">
+                <option>Star Wars</option>
+                <option>Vanilla Sky</option>
+                <option>Inception</option>
+              </select>
+              <label for="favgame">Favourite Game:</label>
+              <select id="favgame" name="favgame">
+                <option>DragonBall Z</option>
+                <option>Star Wars</option>
+                <option>Pokemon</option>
+              </select>
+            </fieldset>
+          </div>
+          
+          <br>
+          <br>
+          <h3>Search Field</h3>
+          <div data-role="fieldcontain">
+            <label for="mobile">Mobile:</label>
+            <input type="search" name="mobile" id="mobile" value="" />
+          </div>  
+          
+          <br>
+
+          <div data-role="fieldcontain">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" value="" />
+          </div>
+          <div data-role="fieldcontain">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" value="" />
+            <h4>WITH MINI STYLE</h4>
+            <input type="email" name="email" id="email" value="" data-mini="true"/>
+          </div>
+          <div data-role="fieldcontain">
+            <label for="gender">Gender:</label>
+            <select name="gender" id="gender" data-role="slider">
+            <option value="0">Male</option>
+            <option value="1">Female</option>
+            </select>
+          </div>
+          <br>
+
+          <h3>Selector</h3>
+          <div data-role="fieldcontain">
+            <label for="coolness">Select Age:</label>
+            <input type="range" name="coolness" id="coolness" min="18" max="200" value="22" data-highlight="true">
+          </div>  
+          <br>
+          <div data-role="fieldcontain">
+            <label for="bio">Bio:</label>
+            <textarea name="bio" id="bio"></textarea>
+          </div>
+          <div data-role="fieldcontain">
+            <input type="submit" name="submit" value="Send" />
+            <input type="submit" name="submit" value="Send(without role)" data-role="none" />
+          </div>  
+        </form>
+      </div>
+      <div data-role="footer" data-position="fixed">
+        <h4><i>Copyright KD &copy; 2012</i></h4>
+      </div>
+    </div>
+  </body>
+</html>
